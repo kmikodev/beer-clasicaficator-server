@@ -12,6 +12,7 @@ def create_tables():
         """CREATE TABLE IF NOT EXISTS beers(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
+                beer TEXT NOT NULL,
                 comment TEXT NOT NULL
             )
             """

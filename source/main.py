@@ -21,7 +21,8 @@ def insert_beer():
     beer_details = request.get_json()
     name = beer_details["name"]
     comment = beer_details["comment"]
-    result = beer_controller.insert_beer(name, comment)
+    beer = beer_details["beer"]
+    result = beer_controller.insert_beer(name, beer, comment)
     return jsonify(result)
 
 
@@ -30,9 +31,9 @@ def update_beer():
     beer_details = request.get_json()
     id = beer_details["id"]
     name = beer_details["name"]
-    price = beer_details["price"]
-    rate = beer_details["rate"]
-    result = beer_controller.update_beer(id, name, comment)
+    beer = beer_details["beer"]
+    comment = beer_details["comment"]
+    result = beer_controller.update_beer(id, name, beer, comment)
     return jsonify(result)
 
 
