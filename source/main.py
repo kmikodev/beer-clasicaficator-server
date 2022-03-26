@@ -23,7 +23,7 @@ def insert_beer():
     comment = beer_details["comment"]
     beer = beer_details["beer"]
     result = beer_controller.insert_beer(name, beer, comment)
-    return jsonify(result)
+    return jsonify({"ok": 'true'})
 
 
 @app.route("/beer", methods=["PUT"])
